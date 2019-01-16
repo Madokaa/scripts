@@ -1,0 +1,27 @@
+/* ==UserStyle==
+@name           B站直播页面美化
+@namespace      github.com/openstyles/stylus
+@version        0.1.0
+@description    屏蔽一些元素，美化页面
+@author         小忍Alter
+==/UserStyle== */
+
+@-moz-document regexp("https://live.bilibili.com/\\w.*") {
+	/* 在此插入代码... */
+	/* 视频上的通知条 */
+	/* .bilibili-live-player-video-operable-container, */
+	/* .bilibili-live-player-video-gift, */
+	/* 视频上的logo */
+	.bilibili-live-player-video-logo,
+	/* 老爷进场提醒 */
+	/* .chat-item.welcome-msg, */
+	/* 愿望瓶 */
+	.wish-box.a-scale-in-ease.p-absolute.border-box.common-popup-wrap.popup,
+	/* 用户等级显示 */
+	/* .dp-i-block.p-relative.v-middle.user-level-icon, */
+	/* 头衔显示 */
+	.dp-i-block.p-relative.v-middle.title-label,
+	.nav-goto-top {
+		display: none
+	}
+}
