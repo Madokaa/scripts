@@ -6,7 +6,8 @@
 @author         小忍Alter
 ==/UserStyle== */
 
-@-moz-document regexp("https://www.bilibili.com/video/av.*") {
+@-moz-document regexp("https://www.bilibili.com/bangumi/play/.*"),
+regexp("https://www.bilibili.com/video/av.*") {
 	:root {
 		--head-height: 42px;
 		--info-height: 60px;
@@ -22,7 +23,8 @@
 		margin-top: 0 !important;
 		margin-left: 100px !important;
 	}
-	/* 头部 */
+	/************************************************************** 头部 **************************************************************/
+	/**********************************************************************************************************************************/
 	body.player-mode-widescreen .bili-header-m .nav-menu .up-load .u-link,
 	body.player-mode-widescreen .bili-header-m a.t,
 	body.player-mode-widescreen .bili-header-m {
@@ -72,91 +74,12 @@
 	}
 	body.player-mode-widescreen .stardust-video .nav-menu .nav-con .nav-item.home i {
 		/* 站标 */
-		/* 		background: var(--img);
-		background-size: contain; */
+		/* 		background: var(--img); */
+		/* 		background-size: contain; */
 		color: silver !important;
 	}
-	/* 调整UP */
-	body.player-mode-widescreen #v_upinfo {
-		position: absolute;
-		top: calc(var(--head-height) + var(--player-height) + 12px);
-		/* 		margin-left: 637px; */
-		z-index: 999;
-	}
-	body.player-mode-widescreen .up-info .u-info .desc {
-		width: 240px;
-	}
-	/* 关注按钮 */
-	body.player-mode-widescreen .up-info .btn {
-		transform: translate(250px, -40px)
-	}
-	/* 	@media (min-width: 1342px) and (min-height:620px) {
-		body.player-mode-widescreen #v_upinfo {
-			margin-left: 853px;
-		}
-	}
-	@media (min-width: 1550px) and (min-height:830px) {
-		body.player-mode-widescreen #v_upinfo {
-			margin-left: 1070px;
-		}
-	}
-	@media (min-width: 1740px) and (min-height:1041px) {
-		body.player-mode-widescreen #v_upinfo {
-			margin-left: 1279px;
-		}
-	} */
-	/* 弹幕列表 */
-	body.player-mode-widescreen #danmukuBox {
-		height: var(--player-height);
-		margin-bottom: 100px;
-		visibility: hidden;
-	}
-	/* 播放器占位 */
-	body.player-mode-widescreen #playerWrap {
-		height: var(--player-height) !important;
-	}
-	/* 顶部标题部分下移 */
-	body.player-mode-widescreen #viewbox_report {
-		/* 		margin-top: 453px; */
-		position: absolute;
-		top: calc(var(--head-height) + var(--player-height) - 0px);
-	}
-	/* 简介下移 */
-	body.player-mode-widescreen #v_desc {
-		margin-top: 90px;
-	}
-	body.player-mode-widescreen .video-info .video-data {
-		margin: 0;
-	}
-	body.player-mode-widescreen .video-info .video-title {
-		margin-bottom: 0px;
-	}
-	/* 调整数据栏 */
-	body.player-mode-widescreen #arc_toolbar_report {
-		position: absolute;
-		clip-path: inset(0px 50px 10px 0px);
-		top: calc(var(--player-height) + var(--head-height));
-		margin-top: 30px;
-		margin-left: 300px;
-	}
-	body.player-mode-widescreen #arc_toolbar_report .share {
-		display: none;
-	}
-	/* 播放器 */
-	body.player-mode-widescreen #bofqi {
-		width: 100% !important;
-		height: var(--player-height) !important;
-		top: var(--head-height) !important;
-		left: 0 !important;
-		margin-left: 0 !important;
-		z-index: 100;
-	}
-	/* 充电按钮 */
-	body.player-mode-widescreen .up-info .btn.followed .b-cd {
-		color: #99a2aa;
-		border: 1px solid #e5e9ef;
-		background: #e5e9ef;
-	}
+	/************************************************************** 弹幕框置顶 **************************************************************/
+	/**********************************************************************************************************************************/
 	/* 弹幕输入框移到视频顶部 */
 	#bilibiliPlayer.mode-widescreen .bilibili-player-video-bottom-area {
 		position: absolute !important;
@@ -191,5 +114,125 @@
 	}
 	#bilibiliPlayer.mode-widescreen .bilibili-player-video-sendbar:hover {
 		opacity: 1;
+	}
+}
+@-moz-document regexp("https://www.bilibili.com/video/av.*") {
+	/* 调整UP */
+	body.player-mode-widescreen #v_upinfo {
+		position: absolute !important;
+		top: calc(var(--head-height) + var(--player-height) + 11px) !important;
+		/* 		margin-left: 637px; */
+		z-index: 999 !important;
+	}
+	body.player-mode-widescreen .up-info .u-info .desc {
+		width: 240px !important;
+	}
+	/* 关注按钮 */
+	body.player-mode-widescreen .up-info .btn {
+		transform: translate(250px, -40px) !important;
+	}
+	/* 	@media (min-width: 1342px) and (min-height:620px) {
+		body.player-mode-widescreen #v_upinfo {
+			margin-left: 853px;
+		}
+	}
+	@media (min-width: 1550px) and (min-height:830px) {
+		body.player-mode-widescreen #v_upinfo {
+			margin-left: 1070px;
+		}
+	}
+	@media (min-width: 1740px) and (min-height:1041px) {
+		body.player-mode-widescreen #v_upinfo {
+			margin-left: 1279px;
+		}
+	} */
+	/* 弹幕列表 */
+	body.player-mode-widescreen #danmukuBox {
+		height: var(--player-height) !important;
+		margin-bottom: 100px !important;
+		visibility: hidden !important;
+	}
+	/* 播放器占位 */
+	body.player-mode-widescreen #playerWrap {
+		height: var(--player-height) !important;
+	}
+	/* 顶部标题部分下移 */
+	body.player-mode-widescreen #viewbox_report {
+		/* 		margin-top: 453px; */
+		position: absolute !important;
+		top: calc(var(--head-height) + var(--player-height) - 0px) !important;
+	}
+	/* 简介下移 */
+	body.player-mode-widescreen #v_desc {
+		margin-top: 90px !important;
+	}
+	body.player-mode-widescreen .video-info .video-data {
+		margin: 0 !important;
+	}
+	body.player-mode-widescreen .video-info .video-title {
+		margin-bottom: 0px !important;
+	}
+	/* 调整数据栏 */
+	body.player-mode-widescreen #arc_toolbar_report {
+		position: absolute !important;
+		clip-path: inset(0px 80px 10px 0px) !important;
+		top: calc(var(--player-height) + var(--head-height));
+		margin-top: 30px !important;
+		margin-left: 300px !important;
+	}
+	body.player-mode-widescreen #arc_toolbar_report .share {
+		display: none !important;
+	}
+	/* 播放器 */
+	body.player-mode-widescreen #bofqi {
+		position: absolute !important;
+		width: 100% !important;
+		height: var(--player-height) !important;
+		top: var(--head-height) !important;
+		left: 0 !important;
+		margin-left: 0 !important;
+		z-index: 100 !important
+	}
+	/* 充电按钮 */
+	body.player-mode-widescreen .up-info .btn.followed .b-cd {
+		color: #99a2aa !important;
+		border: 1px solid #e5e9ef !important;
+		background: #e5e9ef !important;
+	}
+}
+
+@-moz-document regexp("https://www.bilibili.com/bangumi/play/.*") {
+	:root {
+		--info-height: 50px;
+	}
+	/* 弹幕列表 */
+	body.player-mode-widescreen #danmukuBox {
+		height: var(--player-height) !important;
+		margin-bottom: 100px !important;
+		visibility: hidden !important;
+	}
+	body.player-mode-widescreen #app {
+		margin-top: 0px !important;
+		max-width: 100% !important;
+		min-width: 0 !important;
+		width: 100% !important;
+		padding-left: 76px !important;
+	}
+	body.player-mode-widescreen #player_module {
+		padding-left: 0px !important;
+	}
+	body.player-mode-widescreen .plp-l {
+		padding-top: var(--player-height) !important;
+	}
+	body.player-mode-widescreen .plp-r {
+		padding-top: 30px !important;
+	}
+	/* 播放器 */
+	body.player-mode-widescreen #bofqi {
+		width: 100% !important;
+		height: var(--player-height) !important;
+		left: 0 !important;
+		margin-left: 0 !important;
+		z-index: 999 !important;
 	}
 }
